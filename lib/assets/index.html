@@ -19,21 +19,5 @@
   </head>
   <body>
     <div id="talkjs-container"></div>
-  <script>
-    (async () => {
-      await Talk.ready();
-
-      let user_0 = new Talk.User({"id":"123456","name":"Alice","email":["alice@example.com"],"photoUrl":"https://demo.talkjs.com/img/alice.jpg","role":"default","welcomeMessage":"Hey there! How are you? :-)"});
-      const options = {"appId":"Hku1c4Pt"};
-      options["me"] = user_0;
-      const session = new Talk.Session(options);
-      chatBox = session.createChatbox({"highlightedWords":[],"messageFilter":{}});
-      let conversation_1 = session.getOrCreateConversation("7fcfae37bf41727cd5d6")
-      conversation_1.setParticipant(user_0, {"notify":true});
-      let user_2 = new Talk.User({"id":"654321","name":"Sebastian","email":["Sebastian@example.com"],"photoUrl":"https://demo.talkjs.com/img/sebastian.jpg","role":"default","welcomeMessage":"Hey, how can I help?"});
-      conversation_1.setParticipant(user_2, {});
-      chatBox.select(conversation_1, {});
-    }());
-  </script>
   </body>
 </html>
