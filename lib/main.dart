@@ -50,7 +50,7 @@ class WebViewCustomPage extends StatelessWidget {
     print('📗 _onWebViewCreated');
 
     String htmlData = await rootBundle.loadString('packages/webview_bug/assets/index.html');
-    controller.loadData(data: htmlData, baseUrl: Uri.parse("https://google.com"));
+    controller.loadData(data: htmlData, baseUrl: Uri.parse("https://app.talkjs.com"));
   }
 
   void _onLoadStop(InAppWebViewController controller, Uri? url) async {
